@@ -1,0 +1,182 @@
+[gd_scene load_steps=7 format=3 uid="uid://coy8vyxm5cck0"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://_Test/proto_controller.tscn" id="1_gy7eo"]
+[ext_resource type="PackedScene" uid="uid://mtaum74ksnqi" path="res://_Test/chest_gold_22.tscn" id="2_pp2ae"]
+[ext_resource type="PackedScene" uid="uid://86vfaonv4usm" path="res://_Test/barrel.tscn" id="4_60oxv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q7ave"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_k4b76"]
+sky_material = SubResource("ProceduralSkyMaterial_q7ave")
+
+[sub_resource type="Environment" id="Environment_gy7eo"]
+background_mode = 2
+sky = SubResource("Sky_k4b76")
+tonemap_mode = 2
+
+[node name="Node3D" type="Node"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ProtoController" parent="Node" instance=ExtResource("1_gy7eo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6, 38.8)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Node"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.39999986, 0.95, 45.85)
+use_collision = true
+size = Vector3(3.8, 1.7, 3.3)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Node"]
+environment = SubResource("Environment_gy7eo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node"]
+transform = Transform3D(-0.8660254, -0.33456534, 0.37157238, 0.46984637, -0.7987074, 0.37591332, 0.17101005, 0.50013244, 0.84889525, 0, 13.6, 0)
+shadow_enabled = true
+
+[node name="blockup phaze" type="Node" parent="Node"]
+
+[node name="floor" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0.1, -0.7499998, 0)
+use_collision = true
+size = Vector3(1, 3.3, 1)
+
+[node name="pedestal" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(11.999999, 0, 0, 0, 1, 0, 0, 0, 9.799998, 0.1, -1.05, -4.7999997)
+use_collision = true
+size = Vector3(1, 5.3, 1)
+
+[node name="walls" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 1, 0.9500017, 2.7, -27.100002)
+use_collision = true
+size = Vector3(43.600002, 1, 1)
+
+[node name="walls2" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 5, 0, -1, 0, -4.371139e-08, -20.249998, 2.7, -5.7000017)
+use_collision = true
+size = Vector3(43.600002, 1, 1)
+
+[node name="walls3" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 5, 0, 8.742278e-08, 0, -1, 1.1500025, 3, 25.75)
+use_collision = true
+size = Vector3(43.600002, 1, 21.7)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Node/blockup phaze/walls3"]
+transform = Transform3D(1.937151e-07, 1.3113404e-07, -9.060472, 1.6952238, 1.0246026e-12, 1.0967254e-06, 2.0908316e-12, -0.9999988, -1.1881416e-06, -2.3841858e-07, -0.19999933, 2.1749992)
+operation = 2
+radius = 0.4
+height = 33.649998
+sides = 11
+
+[node name="walls4" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 5, 0, -1, 0, -4.371138e-08, 22.450003, 2.7, -5.300002)
+use_collision = true
+size = Vector3(43.600002, 1, 1)
+
+[node name="walls5" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(-0.9999965, 0.0008420944, -0.0026330464, 2.8446317e-05, 24.999949, 0.0019835853, 0.0026331078, 0.0495876, -0.99999446, 1.199995, 2.8999996, 48.149998)
+use_collision = true
+size = Vector3(17.9, 0.2, 1)
+
+[node name="walls6" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 25, 0, -1, 0, -4.371138e-08, 9.499995, 2.8999996, 39.649998)
+use_collision = true
+size = Vector3(17.9, 0.2, 1)
+
+[node name="walls7" type="CSGBox3D" parent="Node/blockup phaze"]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 25, 0, -1, 0, -4.371138e-08, -7.4000044, 2.8999996, 39.649998)
+use_collision = true
+size = Vector3(17.9, 0.2, 1)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -16.7, 1.5000005, 10.7)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -16.5, 1.5000005, 6.1)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -16.5, 1.5000005, 0.5)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -16.1, 1.5000005, -4.5)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -15.900001, 1.5000005, -9)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -16.1, 1.5000005, -13)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -15.8, 1.5000005, -16.9)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, -15.8, 1.5000005, -20.9)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 18.599998, 1.5000005, 9)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 18.8, 1.5000005, 4.3999996)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 18.8, 1.5000005, -1.2)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 19.199999, 1.5000005, -6.2)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 19.399998, 1.5000005, -10.7)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 19.199999, 1.5000005, -14.7)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D15" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 19.5, 1.5000005, -18.6)
+use_collision = true
+radius = 0.90000004
+
+[node name="CSGCylinder3D16" type="CSGCylinder3D" parent="Node/blockup phaze"]
+transform = Transform3D(1, 0, 0, 0, 6, 0, 0, 0, 1, 19.5, 1.5000005, -22.6)
+use_collision = true
+radius = 0.90000004
+
+[node name="chest_gold2" parent="." instance=ExtResource("2_pp2ae")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.3, 0.90000004, -1)
+
+[node name="chest_gold3" parent="." instance=ExtResource("2_pp2ae")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6, 0.90000004, 44)
+
+[node name="Node3D" parent="." instance=ExtResource("4_60oxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4, 0.8, -6)
+
+[node name="Barrel" parent="." instance=ExtResource("4_60oxv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7, 0.90000004, -20.1)
