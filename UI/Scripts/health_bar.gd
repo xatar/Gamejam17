@@ -1,6 +1,6 @@
 extends ProgressBar
 
-@export var owning_character: CharacterBody2D
+@export var owning_character: CharacterBody3D
 
 var health_component: HealthComponent
 

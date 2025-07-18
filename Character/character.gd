@@ -1,5 +1,5 @@
 class_name Character
-extends CharacterBody2D
+extends CharacterBody3D
 
 @export var health_component: HealthComponent
 @export var attack_component: AttackComponent
@@ -7,7 +7,7 @@ extends CharacterBody2D
 func _ready() -> void:
 	health_component.on_death.connect(_on_death)
 
-func deal_damage(target: CharacterBody2D) -> void:
+func deal_damage(target: CharacterBody3D) -> void:
 	attack_component.deal_damage(attack_component.damage, target)
 
 func take_damage(amount: float) -> void:
