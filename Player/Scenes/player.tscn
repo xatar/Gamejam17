@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdt0b18eiup3"]
+
+[ext_resource type="Script" uid="uid://dvcus4d3y8q5g" path="res://Player/Scripts/player.gd" id="1_rg7kn"]
+[ext_resource type="PackedScene" uid="uid://ce0oiobpdlfv6" path="res://Components/Scenes/health_component.tscn" id="2_52sos"]
+[ext_resource type="PackedScene" uid="uid://bjx3o8jkpec8j" path="res://UI/Scenes/health_bar.tscn" id="3_52sos"]
+[ext_resource type="PackedScene" uid="uid://bk1d0d1r6radq" path="res://Components/Scenes/attack_component.tscn" id="3_omv0o"]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_component", "attack_component")]
+script = ExtResource("1_rg7kn")
+health_component = NodePath("HealthComponent")
+attack_component = NodePath("AttackComponent")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_52sos")]
+max_health = 100.0
+
+[node name="AttackComponent" parent="." instance=ExtResource("3_omv0o")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" parent="CanvasLayer" node_paths=PackedStringArray("owning_character") instance=ExtResource("3_52sos")]
+owning_character = NodePath("../..")
