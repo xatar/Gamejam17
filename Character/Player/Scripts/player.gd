@@ -1,9 +1,5 @@
 class_name Player
-extends CharacterBody2D
-
-@export var health_component: HealthComponent
-@export var attack_component: AttackComponent
-
+extends Character
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("take_damage"):

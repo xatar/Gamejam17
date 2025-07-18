@@ -1,6 +1,6 @@
 extends Control
 
-@onready var progress_bar = $ProgressBar
+@onready var progress_bar: ProgressBar = $ProgressBar
 
 @export var owning_character: CharacterBody2D
 
@@ -11,7 +11,7 @@ func _ready() -> void:
 	set_percent(health_component.health, health_component.max_health)
 	health_component.on_health_changed.connect(_on_health_changed)
 
-func _on_health_changed(current_health: float, max_health: float):
+func _on_health_changed(current_health: float, max_health: float) -> void:
 	set_percent(current_health, max_health)
 
 func set_percent(current_health: float, max_health: float) -> void:

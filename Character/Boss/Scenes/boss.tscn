@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://jtn00cqmww18"]
+
+[ext_resource type="Script" uid="uid://ca4kkqlvwku28" path="res://Character/Boss/Scripts/boss.gd" id="1_v75cl"]
+[ext_resource type="PackedScene" uid="uid://bk1d0d1r6radq" path="res://Components/Scenes/attack_component.tscn" id="2_2gn34"]
+[ext_resource type="PackedScene" uid="uid://ce0oiobpdlfv6" path="res://Components/Scenes/health_component.tscn" id="3_646h7"]
+
+[node name="Boss" type="CharacterBody2D" node_paths=PackedStringArray("health_component", "attack_component")]
+script = ExtResource("1_v75cl")
+health_component = NodePath("HealthComponent")
+attack_component = NodePath("AttackComponent")
+
+[node name="AttackComponent" parent="." instance=ExtResource("2_2gn34")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_646h7")]

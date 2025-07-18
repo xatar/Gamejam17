@@ -14,13 +14,20 @@ config/name="pirate-software-jam-17"
 run/main_scene="uid://cmufaefydtm8i"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+
 [file_customization]
 
 folder_colors={
-"res://Components/": "red",
-"res://Maps/": "orange",
-"res://Player/": "yellow",
-"res://UI/": "green"
+"res://Assets/": "red",
+"res://Character/": "orange",
+"res://Character/Boss/": "orange",
+"res://Character/Player/": "orange",
+"res://Components/": "yellow",
+"res://Maps/": "green",
+"res://UI/": "teal"
 }
 
 [input]
