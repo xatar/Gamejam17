@@ -1,6 +1,4 @@
-extends Control
-
-@onready var progress_bar: ProgressBar = $ProgressBar
+extends ProgressBar
 
 @export var owning_character: CharacterBody2D
 
@@ -15,4 +13,4 @@ func _on_health_changed(current_health: float, max_health: float) -> void:
 	set_percent(current_health, max_health)
 
 func set_percent(current_health: float, max_health: float) -> void:
-	progress_bar.value = (current_health / max_health) * 100 if max_health > 0.0 else 0.0
+	value = (current_health / max_health) * 100 if max_health > 0.0 else 0.0

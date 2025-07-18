@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dvcus4d3y8q5g" path="res://Character/Player/Scripts/player.gd" id="1_rg7kn"]
 [ext_resource type="PackedScene" uid="uid://ce0oiobpdlfv6" path="res://Components/Scenes/health_component.tscn" id="2_52sos"]
-[ext_resource type="PackedScene" uid="uid://bjx3o8jkpec8j" path="res://UI/Scenes/health_bar.tscn" id="3_52sos"]
+[ext_resource type="PackedScene" uid="uid://b3ccqayos0ru2" path="res://UI/Scenes/health_bar.tscn" id="3_52sos"]
 [ext_resource type="PackedScene" uid="uid://bk1d0d1r6radq" path="res://Components/Scenes/attack_component.tscn" id="3_omv0o"]
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("health_component", "attack_component")]

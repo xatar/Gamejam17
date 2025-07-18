@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmufaefydtm8i"]
+[gd_scene load_steps=3 format=3 uid="uid://cmufaefydtm8i"]
 
 [ext_resource type="PackedScene" uid="uid://bdt0b18eiup3" path="res://Character/Player/Scenes/player.tscn" id="1_y2ywj"]
+[ext_resource type="PackedScene" uid="uid://jtn00cqmww18" path="res://Character/Boss/Scenes/boss.tscn" id="2_y2ywj"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_y2ywj")]
 unique_name_in_owner = true
 position = Vector2(491.045, 99.5388)
+
+[node name="Boss" parent="." instance=ExtResource("2_y2ywj")]
