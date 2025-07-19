@@ -1,12 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmufaefydtm8i"]
+[gd_scene load_steps=7 format=3 uid="uid://cmufaefydtm8i"]
 
 [ext_resource type="PackedScene" uid="uid://d0v5f8t7pe0qd" path="res://Character/Player/Scenes/player.tscn" id="1_y2ywj"]
 [ext_resource type="PackedScene" uid="uid://4vtgbqxa3dgg" path="res://Character/Boss/Scenes/boss.tscn" id="2_y2ywj"]
+[ext_resource type="Script" uid="uid://l8fdx4e6bkea" path="res://Maps/spring_arm_3d.gd" id="3_1ldu1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y2ywj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y2ywj"]
+size = Vector3(14.5645, 1, 14.1041)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1ldu1"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_y2ywj")]
+[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_y2ywj")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 491.045, 99.5388, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.688677, 0)
+camera = NodePath("../SpringArm3D/Camera3D")
 
 [node name="Boss" parent="." instance=ExtResource("2_y2ywj")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.857724, 0.51411, 0, -0.51411, 0.857724, 0, 3.00637, 3.80909)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(14.5782, 0, 0, 0, 1, 0, 0, 0, 14.1134, 0, 0, 0)
+mesh = SubResource("BoxMesh_y2ywj")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.000312805)
+shape = SubResource("BoxShape3D_y2ywj")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." node_paths=PackedStringArray("player")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 12, 0)
+shape = SubResource("SphereShape3D_1ldu1")
+spring_length = 15.0
+script = ExtResource("3_1ldu1")
+player = NodePath("../Player")
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
