@@ -27,7 +27,7 @@ mesh = SubResource("CapsuleMesh_1lbty")
 shape = SubResource("ConcavePolygonShape3D_g5gpy")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38157, -0.160746)
+transform = Transform3D(0.962009, -0.121594, 0.244447, -1.8574e-09, 0.895347, 0.44537, -0.273019, -0.42845, 0.861331, 1.06301, 2.65277, 1.93346)
 current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
