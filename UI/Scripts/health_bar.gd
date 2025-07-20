@@ -5,10 +5,11 @@ extends ProgressBar
 var health_component: HealthComponent
 
 func _ready() -> void:
-	health_component = owning_character.health_component
-	set_percent(health_component.health, health_component.max_health)
-	health_component.on_health_changed.connect(_on_health_changed)
-
+	#health_component = owning_character.health_component
+	#set_percent(health_component.health, health_component.max_health)
+	#health_component.on_health_changed.connect(_on_health_changed)
+	pass
+	
 func _on_health_changed(current_health: float, max_health: float) -> void:
 	set_percent(current_health, max_health)
 
