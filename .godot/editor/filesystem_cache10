@@ -1,0 +1,44 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1753733524
+README.md::TextFile::-1::1753733317::0::1::::<><><>0<>0<><>::
+::res://assets/::1753733587
+bricks.glb::PackedScene::1069882542364141446::1753733537::1753733538::1::::<><><>0<>0<>f82c235edd66f9c69c8ecc4d9aadd2e9<>res://.godot/imported/bricks.glb-628de60e69baaa61a1ca732849a60db3.scn::
+wall1.glb::PackedScene::1208791309604682264::1753733587::1753733587::1::::<><><>0<>0<>b399c020695cc6001d0fe4356ad9b312<>res://.godot/imported/wall1.glb-241c7c6af5dd0618f2b35028c1f8f669.scn::
+wall2_wall2.png::CompressedTexture2D::199280329893493685::1753733538::1753733539::1::::<><><>0<>0<>748f589f17bbdc169cb2c3bfea945a8b<>res://.godot/imported/wall2_wall2.png-c98d1dc8b9d153158b030e5eddefb90b.s3tc.ctex::
+wall curve_wall curve.png::CompressedTexture2D::5085212074860573856::1753733538::1753733539::1::::<><><>0<>0<>d2494ce1b0669c55f7d105f3c8a90f58<>res://.godot/imported/wall curve_wall curve.png-b8ad37eb8dc963738f50b48868e11b76.s3tc.ctex::
+wall curve quarter_wall curve quarter.png::CompressedTexture2D::3848986801672843708::1753733538::1753733539::1::::<><><>0<>0<>8d96c4587dc9a8c4b132dae80ae4520f<>res://.godot/imported/wall curve quarter_wall curve quarter.png-3597f7f19d74c9f43429f47c7c7b0c43.s3tc.ctex::
+stairs_stairs.png::CompressedTexture2D::5812646111936369686::1753733538::1753733539::1::::<><><>0<>0<>92f9175cc64344f4cff33512ea1b62f6<>res://.godot/imported/stairs_stairs.png-31c4bcaad04f7d132fb63ea07ebaa950.s3tc.ctex::
+rock.glb::PackedScene::4955022987265032860::1753733537::1753733538::1::::<><><>0<>0<>80b8a653a15ec3141f46190d8868918a<>res://.godot/imported/rock.glb-d594aeca529c0c54c623e265d40764ba.scn::
+stairs.glb::PackedScene::1846657668059803834::1753733537::1753733538::1::::<><><>0<>0<>5cce8a9d7b4932f601c2ecb2b3223e3e<>res://.godot/imported/stairs.glb-099e517a88241ce5c4361574378b4d0e.scn::uid://co2xoxwgk2nms::::res://assets/stairs_stairs.png
+wall2.glb::PackedScene::1247064651604720317::1753733537::1753733539::1::::<><><>0<>0<>24dd326cfde18481dd7b5350ba4ac5aa<>res://.godot/imported/wall2.glb-7707b5cb652c0a73985b77e2d015f821.scn::uid://c3seakwiavxt::::res://assets/wall2_wall2.png
+wall curve quarter.glb::PackedScene::825135741681174945::1753733537::1753733538::1::::<><><>0<>0<>d69f28f7d6ccfbb2ed2cad48dd65a10b<>res://.godot/imported/wall curve quarter.glb-fa817fe01fb2bc533e4dba8616359fc4.scn::uid://bu3qirk8teeym::::res://assets/wall curve quarter_wall curve quarter.png
+wall curve.glb::PackedScene::8427950245853394681::1753733537::1753733538::1::::<><><>0<>0<>51798127da3171f7d31ecfb54906175a<>res://.godot/imported/wall curve.glb-3251b9d7982d0544fca658500fbb00ce.scn::uid://cepkx2dore1h1::::res://assets/wall curve_wall curve.png
+::res://Character/::1753733414
+character.gd::GDScript::3516025527385573710::1753733414::0::1::::Character<>CharacterBody3D<><>0<>0<><>::
+::res://Character/Boss/::1753733414
+::res://Character/Boss/Scenes/::1753733414
+boss.tscn::PackedScene::2079992814250526366::1753733414::0::1::::<><><>0<>0<><>::uid://ca4kkqlvwku28::::res://Character/Boss/Scripts/boss.gd<>uid://3wmy368uki6::::res://Components/Scripts/attack_component.gd<>uid://0r8jlbqx68ko::::res://Components/Scripts/health_component.gd<>uid://b3ccqayos0ru2::::res://UI/Scenes/health_bar.tscn
+::res://Character/Boss/Scripts/::1753733414
+boss.gd::GDScript::4833334208471060503::1753733414::0::1::::Boss<>Character<><>0<>0<><>::
+::res://Character/Player/::1753733414
+::res://Character/Player/Scenes/::1753733414
+player.tscn::PackedScene::8959167277713890391::1753733414::0::1::::<><><>0<>0<><>::uid://dvcus4d3y8q5g::::res://Character/Player/Scripts/player.gd<>uid://0r8jlbqx68ko::::res://Components/Scripts/health_component.gd<>uid://3wmy368uki6::::res://Components/Scripts/attack_component.gd<>uid://b3ccqayos0ru2::::res://UI/Scenes/health_bar.tscn
+::res://Character/Player/Scripts/::1753733414
+player.gd::GDScript::8638604536248868106::1753733414::0::1::::Player<>CharacterBody3D<><>0<>0<><>::
+::res://Components/::1753733414
+::res://Components/Scenes/::1753733414
+attack_component.tscn::PackedScene::3142209936054363022::1753733414::0::1::::<><><>0<>0<><>::uid://3wmy368uki6::::res://Components/Scripts/attack_component.gd
+health_component.tscn::PackedScene::5106071247597481381::1753733414::0::1::::<><><>0<>0<><>::uid://0r8jlbqx68ko::::res://Components/Scripts/health_component.gd
+::res://Components/Scripts/::1753733414
+attack_component.gd::GDScript::59161085749716967::1753733414::0::1::::AttackComponent<>Node<><>0<>0<><>::
+health_component.gd::GDScript::1791835825736878606::1753733414::0::1::::HealthComponent<>Node<><>0<>0<><>::
+::res://Maps/::1753733414
+game.tscn::PackedScene::5656698850000262178::1753733414::0::1::::<><><>0<>0<><>::uid://d0v5f8t7pe0qd::::res://Character/Player/Scenes/player.tscn<>uid://4vtgbqxa3dgg::::res://Character/Boss/Scenes/boss.tscn
+main_game.tscn::PackedScene::5954517759201606792::1753733414::0::1::::<><><>0<>0<><>::uid://16q3v5lesdmj::::res://Sprites/Grass_19-128x128.png<>uid://d0v5f8t7pe0qd::::res://Character/Player/Scenes/player.tscn
+::res://Sprites/::1753733456
+Grass_19-128x128.png::CompressedTexture2D::1889928268918627421::1753733414::1753733456::1::::<><><>0<>0<>bcd9c6fe75976329cc6dd96167ddc50b<>res://.godot/imported/Grass_19-128x128.png-fa38205fc5e51ce099dfd088822dc6d6.s3tc.ctex::
+::res://UI/::1753733414
+::res://UI/Scenes/::1753733414
+health_bar.tscn::PackedScene::4355987105490597551::1753733414::0::1::::<><><>0<>0<><>::uid://bq4jho8yk63o5::::res://UI/Scripts/health_bar.gd
+::res://UI/Scripts/::1753733414
+health_bar.gd::GDScript::3569868877672097730::1753733414::0::1::::<>ProgressBar<><>0<>0<><>::
