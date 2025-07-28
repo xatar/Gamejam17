@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://16q3v5lesdmj"
-path.s3tc="res://.godot/imported/Grass_19-128x128.png-fa38205fc5e51ce099dfd088822dc6d6.s3tc.ctex"
+uid="uid://co2xoxwgk2nms"
+path.s3tc="res://.godot/imported/stairs_stairs.png-31c4bcaad04f7d132fb63ea07ebaa950.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "548b3ba2cbbed0f96c5b69c4c279bfd0"
+}
 
 [deps]
 
-source_file="res://Sprites/Grass_19-128x128.png"
-dest_files=["res://.godot/imported/Grass_19-128x128.png-fa38205fc5e51ce099dfd088822dc6d6.s3tc.ctex"]
+source_file="res://assets/stairs_stairs.png"
+dest_files=["res://.godot/imported/stairs_stairs.png-31c4bcaad04f7d132fb63ea07ebaa950.s3tc.ctex"]
 
 [params]
 

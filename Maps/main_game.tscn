@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cq3objnaf70l5"]
+[gd_scene load_steps=10 format=3 uid="uid://cq3objnaf70l5"]
 
 [ext_resource type="Texture2D" uid="uid://16q3v5lesdmj" path="res://Sprites/Grass_19-128x128.png" id="1_2hvsv"]
 [ext_resource type="PackedScene" uid="uid://d0v5f8t7pe0qd" path="res://Character/Player/Scenes/player.tscn" id="2_xdrmq"]
+[ext_resource type="PackedScene" uid="uid://r1c8cluo66x2" path="res://assets/wall2.glb" id="3_slpp8"]
+[ext_resource type="PackedScene" uid="uid://l0x4ocl3sypt" path="res://assets/wall curve quarter.glb" id="4_jgrcb"]
+[ext_resource type="PackedScene" uid="uid://1ksggnbv2rwc" path="res://assets/stairs.glb" id="5_5l80t"]
+[ext_resource type="PackedScene" uid="uid://dsctdyinuwsa8" path="res://assets/wall curve.glb" id="6_354uh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdrmq"]
 albedo_texture = ExtResource("1_2hvsv")
@@ -22,13 +26,166 @@ light_energy = 5.9
 shadow_enabled = true
 
 [node name="Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.065, 0, 0, 0, 5.065, 0, 0, 0, 5.065, 0, 0, 0)
+transform = Transform3D(27.035908, 0, 0, 0, 25, 0, 0, 0, 40.696144, 0.032917023, 0.100354195, -0.05735016)
 mesh = SubResource("PlaneMesh_nsa0c")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+transform = Transform3D(6.4572334, 0, 0, 0, 1.3040366, 0, 0, 0, 0.9999998, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_xdrmq")
 
 [node name="Player" parent="." instance=ExtResource("2_xdrmq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08813, 0, 2.90477)
+
+[node name="walls" type="Node3D" parent="."]
+
+[node name="wall2" parent="walls" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79643035, 0.11177586, 4.2106285)
+
+[node name="wall2" parent="walls/wall2" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall4" parent="walls/wall2" instance=ExtResource("3_slpp8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.815481, -0.09700157, -20.219942)
+
+[node name="wall2" parent="walls/wall2/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall4/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall curve quarter2" parent="walls/wall2" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.292967, -0.20877838, -39.085133)
+
+[node name="wall5" parent="walls/wall2" instance=ExtResource("3_slpp8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.25727248, 0.11177586, -40.93386)
+
+[node name="wall2" parent="walls/wall2/wall5" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2/wall5" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall5/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall4" parent="walls/wall2/wall5" instance=ExtResource("3_slpp8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.815481, -0.09700157, -20.219942)
+
+[node name="wall2" parent="walls/wall2/wall5/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2/wall5/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall5/wall4/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall curve quarter2" parent="walls/wall2/wall5" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.292967, -0.20877838, -39.085133)
+
+[node name="wall curve quarter3" parent="walls/wall2" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18.60792, -9.536743e-07, -26.411346)
+
+[node name="wall6" parent="walls/wall2" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023139715, 2.9698372, 0.02384615)
+
+[node name="wall2" parent="walls/wall2/wall6" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2/wall6" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall6/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall4" parent="walls/wall2/wall6" instance=ExtResource("3_slpp8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.815481, -0.09700157, -20.219942)
+
+[node name="wall2" parent="walls/wall2/wall6/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2/wall6/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall6/wall4/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall curve quarter2" parent="walls/wall2/wall6" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.292967, -0.20877838, -39.085133)
+
+[node name="wall5" parent="walls/wall2/wall6" instance=ExtResource("3_slpp8")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.25727248, 0.11177586, -40.93386)
+
+[node name="wall2" parent="walls/wall2/wall6/wall5" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2/wall6/wall5" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall6/wall5/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall4" parent="walls/wall2/wall6/wall5" instance=ExtResource("3_slpp8")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.815481, -0.09700157, -20.219942)
+
+[node name="wall2" parent="walls/wall2/wall6/wall5/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall3" parent="walls/wall2/wall6/wall5/wall4" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.477134, -0.03363265, 0.013687134)
+
+[node name="wall2" parent="walls/wall2/wall6/wall5/wall4/wall3" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7392282, 0.0067745596, -0.012764931)
+
+[node name="wall curve quarter2" parent="walls/wall2/wall6/wall5" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.292967, -0.20877838, -39.085133)
+
+[node name="wall curve quarter3" parent="walls/wall2/wall6" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -18.60792, -9.536743e-07, -26.411346)
+
+[node name="wall curve quarter4" parent="walls/wall2" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.888332, 2.8580604, -14.498669)
+
+[node name="wall curve quarter2" parent="walls" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.661623, -9.536743e-07, -10.311886)
+
+[node name="wall curve quarter3" parent="walls" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.009441, 0.0123446295, -25.367027)
+
+[node name="wall curve quarter4" parent="walls" instance=ExtResource("4_jgrcb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.102919, 0.012344647, -12.858569)
+
+[node name="stairs" parent="walls" instance=ExtResource("5_5l80t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.45742, 0, -30.162868)
+
+[node name="stairs" parent="walls/stairs" instance=ExtResource("5_5l80t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.126313, 0, 0.014043808)
+
+[node name="stairs2" parent="walls/stairs" instance=ExtResource("5_5l80t")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.216789, 0, -1.1632729)
+
+[node name="stairs" parent="walls/stairs/stairs2" instance=ExtResource("5_5l80t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.126313, 0, 0.014043808)
+
+[node name="wall curve2" parent="walls" instance=ExtResource("6_354uh")]
+transform = Transform3D(0.99999756, 0.0010629268, -0.0020043782, 0.0020043505, 2.7117152e-05, 0.999998, 0.0010629786, -0.9999995, 2.4995727e-05, 19.084295, -0.20593372, -7.8511147)
+
+[node name="wall curve2" parent="walls/wall curve2" instance=ExtResource("6_354uh")]
+transform = Transform3D(0.99999756, 0.0020044502, 0.001062905, -0.002004428, 0.9999977, -2.2022581e-05, -0.0010629471, 1.9882891e-05, 0.99999934, 0.36706352, 14.733911, -0.17871548)
+
+[node name="wall3" parent="walls" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.229918, 0.11269836, -15.556564)
+
+[node name="wall4" parent="walls" instance=ExtResource("3_slpp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.218374, 0.112697884, -19.53844)

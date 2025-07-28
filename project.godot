@@ -12,7 +12,7 @@ config_version=5
 
 config/name="pirate-software-jam-17"
 run/main_scene="uid://cmufaefydtm8i"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [debug]
 
@@ -28,7 +28,8 @@ folder_colors={
 "res://Components/": "yellow",
 "res://Maps/": "green",
 "res://Sprites/": "pink",
-"res://UI/": "teal"
+"res://UI/": "teal",
+"res://assets/": "purple"
 }
 
 [input]

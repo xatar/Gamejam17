@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://16q3v5lesdmj"
-path.s3tc="res://.godot/imported/Grass_19-128x128.png-fa38205fc5e51ce099dfd088822dc6d6.s3tc.ctex"
+uid="uid://bu3qirk8teeym"
+path.s3tc="res://.godot/imported/wall curve quarter_wall curve quarter.png-3597f7f19d74c9f43429f47c7c7b0c43.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "af6793d1b1fc1bc5e2e1a3b23ab15fac"
+}
 
 [deps]
 
-source_file="res://Sprites/Grass_19-128x128.png"
-dest_files=["res://.godot/imported/Grass_19-128x128.png-fa38205fc5e51ce099dfd088822dc6d6.s3tc.ctex"]
+source_file="res://assets/wall curve quarter_wall curve quarter.png"
+dest_files=["res://.godot/imported/wall curve quarter_wall curve quarter.png-3597f7f19d74c9f43429f47c7c7b0c43.s3tc.ctex"]
 
 [params]
 
